@@ -24,8 +24,10 @@
                                 l'opzione</small>
                             <br>
                             <div class="my-2">
+                                {{-- <a class="btn btn-outline-primary" href="#" role="button">Vedi</a> --}}
                                 <button type="button" class="btn btn-outline-info ">Modifica</button>
                                 <button type="button" class="btn btn-outline-danger">Cancella</button>
+
                             </div>
                         </div>
 
