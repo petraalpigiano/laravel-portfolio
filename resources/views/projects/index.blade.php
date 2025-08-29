@@ -14,7 +14,8 @@
                         <div class="card-footer">
                             <br>
                             <div class="my-2">
-                                <a class="btn btn-outline-primary" href="#" role="button">Vedi</a>
+                                <a class="btn btn-outline-primary" href={{ route('projects.show', $project) }}
+                                    role="button">Vedi</a>
 
                             </div>
                         </div>

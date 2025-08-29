@@ -96,6 +96,7 @@
         <main class="">
             @yield('content')
             @yield('index')
+            @yield('show')
         </main>
     </div>
 </body>
