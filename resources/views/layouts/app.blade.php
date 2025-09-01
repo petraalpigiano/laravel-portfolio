@@ -98,6 +98,7 @@
             @yield('content')
             @yield('index')
             @yield('show')
+            @yield('create')
         </main>
     </div>
 </body>
