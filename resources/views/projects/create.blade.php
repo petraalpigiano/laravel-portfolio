@@ -12,13 +12,12 @@
             </div>
             <div class="mb-3 d-flex justify-content-center align-items-center">
                 <label for="note" class="form-label me-2 mt-2 fw-bold">Note</label>
-                <input type="text" class="form-control form-input-space" name="note" id="note"
-                    aria-describedby="note">
+                <textarea type="text" class="form-control form-input-space" name="note" id="note" aria-describedby="note"> </textarea>
             </div>
 
             <div class="my-2">
                 <a class="btn btn-outline-primary" href={{ route('projects.index') }} role="button">Progetti</a>
-                <button type="submit" class="btn btn-primary">Inserisci</button>
+                <button type="submit" class="btn btn-outline-success">Inserisci</button>
             </div>
 
         </form>

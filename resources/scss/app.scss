@@ -1,6 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
 
 .form-input-space {
-    width: fit-content;
+    width: 50%;
     text-align: center;
+}
+.shit {
+    min-width: fit-content;
+    // centrare dropdown
 }
