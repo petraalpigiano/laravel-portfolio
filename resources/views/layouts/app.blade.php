@@ -99,6 +99,7 @@
             @yield('index')
             @yield('show')
             @yield('create')
+            @yield('edit')
         </main>
     </div>
 </body>

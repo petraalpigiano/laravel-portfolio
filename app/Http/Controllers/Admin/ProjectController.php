@@ -34,14 +34,14 @@ class ProjectController extends Controller
         // dd($request);
         $data = $request->all(); // non posso fare ::all() perche non è un metodo statico 
         // dd($data);
-        $newProject = new Project();
+        $project = new Project();
 
-        $newProject->title = $data['title'];
-        $newProject->note = $data['note'];
+        $project->title = $data['title'];
+        $project->note = $data['note'];
 
-        $newProject->save();
+        $project->save();
 
-        return redirect()->route('projects.show', $newProject);
+        return redirect()->route('projects.show', $project);
     }
 
     /**
@@ -64,9 +64,21 @@ class ProjectController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Project $project)
     {
-        return 'boh';
+        // dd($request);
+        $data = $request->all();
+        // dd($data);
+        // dd($project);
+
+
+        $project->title = $data['title'];
+        $project->note = $data['note'];
+        // dd($project);
+
+        $project->update();
+
+        return redirect()->route('projects.show', $project);
     }
 
     /**
