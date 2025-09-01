@@ -23,7 +23,14 @@
                                 <a class="btn btn-outline-primary" href={{ route('projects.show', $project) }}
                                     role="button">Vedi</a>
                                 <button type="button" class="btn btn-outline-info ">Modifica</button>
-                                <button type="button" class="btn btn-outline-danger">Cancella</button>
+                                <form class="d-inline" action="{{ route('projects.destroy', $project) }}" method="POST">
+                                    @csrf
+
+                                    @method('DELETE')
+                                    <input class="btn btn-outline-danger" type="submit" value="Cancella">
+                                </form>
+
+
 
                             </div>
                         </div>
