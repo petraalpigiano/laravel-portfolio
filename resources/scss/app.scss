@@ -1,1 +1,6 @@
-@import '~bootstrap/scss/bootstrap'
+@import "~bootstrap/scss/bootstrap";
+
+.form-input-space {
+    width: fit-content;
+    text-align: center;
+}

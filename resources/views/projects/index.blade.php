@@ -6,7 +6,7 @@
             <h2 class="fs-4 text-secondary my-0">
                 {{ __('Progetti') }}
             </h2>
-            <button type="button" class="btn btn-outline-primary">Aggiungi</button>
+            <a class="btn btn-outline-primary" href={{ route('projects.create') }} role="button">Aggiungi</a>
         </div>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($projects as $project)
@@ -22,7 +22,8 @@
                             <div class="my-2">
                                 <a class="btn btn-outline-primary" href={{ route('projects.show', $project) }}
                                     role="button">Vedi</a>
-                                <button type="button" class="btn btn-outline-info ">Modifica</button>
+                                <a class="btn btn-outline-info" href={{ route('projects.edit', $project) }}
+                                    role="button">Modifica</a>
                                 <form class="d-inline" action="{{ route('projects.destroy', $project) }}" method="POST">
                                     @csrf
 

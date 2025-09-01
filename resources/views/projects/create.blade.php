@@ -1,20 +1,26 @@
 @extends('layouts.app')
 
 @section('create')
-    <div class="container">
+    <div class="container text-center">
         <form class="my-3" action="{{ route('projects.store') }}" method="POST">
             @csrf
-            <div class="mb-3">
-                <label for="title" class="form-label">Titolo</label>
-                <input type="text" class="form-control" name="title" id="title" aria-describedby="title">
+            <div class="mb-3 d-flex justify-content-center align-items-center">
+                <label for="title" class="form-label me-2 mt-2 fw-bold">Titolo</label>
+                <input type="text" class="form-control form-input-space" name="title" id="title"
+                    aria-describedby="title">
 
             </div>
-            <div class="mb-3">
-                <label for="note" class="form-label">Note</label>
-                <input type="text" class="form-control" name="note" id="note" aria-describedby="note">
+            <div class="mb-3 d-flex justify-content-center align-items-center">
+                <label for="note" class="form-label me-2 mt-2 fw-bold">Note</label>
+                <input type="text" class="form-control form-input-space" name="note" id="note"
+                    aria-describedby="note">
             </div>
 
-            <button type="submit" class="btn btn-primary">Inserisci</button>
+            <div class="my-2">
+                <a class="btn btn-outline-primary" href={{ route('projects.index') }} role="button">Progetti</a>
+                <button type="submit" class="btn btn-primary">Inserisci</button>
+            </div>
+
         </form>
     </div>
 @endsection
