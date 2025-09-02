@@ -14,6 +14,15 @@
                 <label for="note" class="form-label me-2 mt-2 fw-bold">Note</label>
                 <textarea type="text" class="form-control form-input-space" name="note" id="note" aria-describedby="note"> </textarea>
             </div>
+            <select name="type_id" class="form-select " aria-label="Default select example">
+                <option>Seleziona il tipo</option>
+                @foreach ($types as $type)
+                    <option value="{{ $type['id'] }}">{{ $type['name'] }}</option>
+                @endforeach
+
+                {{-- <option value="2">Two</option>
+                <option value="3">Three</option> --}}
+            </select>
 
             <div class="my-2">
                 <a class="btn btn-outline-primary" href={{ route('projects.index') }} role="button">Progetti</a>
