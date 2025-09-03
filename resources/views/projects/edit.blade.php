@@ -18,7 +18,7 @@
                 <textarea type="text" class="form-control form-input-space " name="note" id="note" aria-describedby="note">{{ $project['note'] }} </textarea>
             </div>
             <select name="type_id" class="form-select " aria-label="Default select example">
-                <option>Seleziona il tipo</option>
+
 
                 @foreach ($types as $type)
                     <option value="{{ $type['id'] }}" {{ $project->type_id == $type['id'] ? 'selected' : '' }}>

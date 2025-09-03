@@ -7,6 +7,8 @@ use App\Models\Project;
 use App\Models\Type;
 use Illuminate\Http\Request;
 
+use function PHPUnit\Framework\isInt;
+
 class ProjectController extends Controller
 {
     /**
@@ -43,6 +45,8 @@ class ProjectController extends Controller
         $project->note = $data['note'];
         $project->type_id = $data['type_id'];
 
+        // dd($data);
+
         $project->save();
 
         return redirect()->route('projects.show', $project);
@@ -53,8 +57,9 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        // dd($project);
+        // dd($project->types());
         // dd($project->type->name);
+        // dd($type);
         return view('projects.show', compact('project'));
     }
 

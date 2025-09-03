@@ -17,7 +17,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $project['title'] }}</h5>
                             <p class="card-text">{{ $project['note'] }}</p>
-                            {{-- <p class="card-text">{{ $project['type_id'] }}</p> --}}
+                            <p class="card-text">Tipo di progetto: {{ $project->type->name }}</p>
                         </div>
                         <div class="card-footer">
                             @php

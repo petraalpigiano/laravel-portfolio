@@ -4,6 +4,7 @@
     <div class="container text-center my-4">
         <h3>{{ $project['title'] }}</h3>
         <p>{{ $project['note'] }}</p>
+        <p>Tipo di progetto: {{ $project->type->name }}</p>
         <div class="my-2">
             <a class="btn btn-outline-primary" href={{ route('projects.index') }} role="button">Progetti</a>
             <a class="btn btn-outline-info" href={{ route('projects.edit', $project) }} role="button">Modifica</a>
