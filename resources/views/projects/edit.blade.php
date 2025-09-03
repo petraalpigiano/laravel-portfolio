@@ -18,13 +18,19 @@
                 <textarea type="text" class="form-control form-input-space " name="note" id="note" aria-describedby="note">{{ $project['note'] }} </textarea>
             </div>
             <select name="type_id" class="form-select " aria-label="Default select example">
-
-
                 @foreach ($types as $type)
                     <option value="{{ $type['id'] }}" {{ $project->type_id == $type['id'] ? 'selected' : '' }}>
                         {{ $type['name'] }}</option>
                 @endforeach
             </select>
+            @foreach ($technologies as $technology)
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="{{ $technology['id'] }}" id="checkDefault"
+                        name="technologies[]" {{ $project->technologies->contains($technology['id']) ? 'checked' : '' }}>
+                    <label class="form-check-label" for="checkDefault">{{ $technology['name'] }}</label>
+                </div>
+            @endforeach
+
             <div class="my-2">
                 <a class="btn btn-outline-primary" href={{ route('projects.index') }} role="button">Progetti</a>
                 <button type="submit" class="btn btn-outline-info">Modifica</button>
