@@ -42,6 +42,7 @@ class ProjectController extends Controller
         // dd($request);
         $data = $request->all(); // non posso fare ::all() perche non è un metodo statico 
         // dd($data);
+        // dd($data['technologies']);
         $project = new Project();
 
         $project->title = $data['title'];
@@ -51,6 +52,12 @@ class ProjectController extends Controller
         // dd($data);
 
         $project->save();
+        if ($request->has('technologies')) {
+            $project->technologies()->attach($data['technologies']);
+        } else {
+            $project->technologies()->detach();
+        }
+
 
         return redirect()->route('projects.show', $project);
     }
@@ -62,6 +69,7 @@ class ProjectController extends Controller
     {
 
         // dd($project->technologies());
+
 
         return view('projects.show', compact('project'));
     }

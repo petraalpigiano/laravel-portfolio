@@ -5,6 +5,10 @@
         <h3>{{ $project['title'] }}</h3>
         <p>{{ $project['note'] }}</p>
         <p>Tipo di progetto: {{ $project->type->name }}</p>
+        @foreach ($project->technologies as $technology)
+            <span class="badge text-white"
+                style="background-color: {{ $technology['color'] }}">{{ $technology['name'] }}</span>
+        @endforeach
         <div class="my-2">
             <a class="btn btn-outline-primary" href={{ route('projects.index') }} role="button">Progetti</a>
             <a class="btn btn-outline-info" href={{ route('projects.edit', $project) }} role="button">Modifica</a>
