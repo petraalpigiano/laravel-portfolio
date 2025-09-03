@@ -20,6 +20,15 @@
                     <option value="{{ $type['id'] }}">{{ $type['name'] }}</option>
                 @endforeach
             </select>
+            @foreach ($technologies as $technology)
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="{{ $technology['id'] }}" id="checkDefault"
+                        name="technologies[]">
+                    <label class="form-check-label" for="checkDefault">{{ $technology['name'] }}</label>
+                </div>
+            @endforeach
+
+
 
             <div class="my-2">
                 <a class="btn btn-outline-primary" href={{ route('projects.index') }} role="button">Progetti</a>
